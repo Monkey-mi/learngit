@@ -1,0 +1,11 @@
+秦岭、淮河一线是北方地区和南方地区的分界线。大兴安岭-阴山-贺兰山为北方
+中国地理分区
+中国地理分区
+地区和西北地区的分界线。我国青藏地区和西北地区，北方地区，南方地区的分界线，大致以第一级阶梯和第二级阶梯的分界线。
+
+
+//删除市级行政
+delete FROM `addr_province` WHERE (gbt_id%10000) != 0
+
+//更新市级行政的省级ID
+update hts.addr_city ac,hts.addr_province ap set ac.province_id = ap.id where floor((ac.gbt_id/10000)) = floor((ap.gbt_id/10000));
