@@ -9,3 +9,6 @@ delete FROM `addr_province` WHERE (gbt_id%10000) != 0
 
 //更新市级行政的省级ID
 update hts.addr_city ac,hts.addr_province ap set ac.province_id = ap.id where floor((ac.gbt_id/10000)) = floor((ap.gbt_id/10000));
+
+//this is test for git
+
